@@ -1,0 +1,38 @@
+{
+  "name": "myhotpics",
+  "version": "0.0.1",
+  "license": "Unlicense",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build",
+    "next": "next",
+    "test": "jest",
+    "lint": "standard"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.2.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "tachyons": "^4.11.1"
+  },
+  "devDependencies": {
+    "jest": "25.1.0",
+    "react-test-renderer": "^16.12.0",
+    "standard": "^14.3.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testPathIgnorePatterns": [
+      "<rootDir>/.next/",
+      "<rootDir>/node_modules/"
+    ]
+  },
+  "standard": {
+    "env": "jest"
+  }
+}
