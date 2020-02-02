@@ -2,7 +2,7 @@ import React from 'react'
 import Gif from '../components/gif'
 import Layout from '../components/layout'
 import Search from '../components/search'
-import get from 'lodash/get'
+import map from 'lodash/map'
 
 const Index = ({ query, gifs }) => {
   return (
