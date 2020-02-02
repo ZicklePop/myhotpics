@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const cx = {
-  input: 'input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100',
+  input: 'input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100'
 }
 
 const Search = ({ defaultValue }) => (
-  <form method="get" action="/">
+  <form method='get' action='/'>
     <style global jsx>
       {`
         input {
@@ -24,11 +24,11 @@ const Search = ({ defaultValue }) => (
       `}
     </style>
     <input
-      type="text"
-      name="q"
-      placeholder="HOT PICS"
+      type='text'
+      name='q'
+      placeholder='HOT PICS'
       defaultValue={defaultValue}
-      autofocus="true"
+      autofocus='true'
       className={cx.input}
       style={{
         appearance: 'none'
