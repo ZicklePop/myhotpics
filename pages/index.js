@@ -10,7 +10,7 @@ const Index = ({ query, gifs }) => {
       <Search defaultValue={query} />
       {map(gifs, el => (
         <Gif
-          key={el.guid}
+          key={el.title}
           {...el}
         />
       ))}
