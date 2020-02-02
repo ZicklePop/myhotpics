@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`page - index should render 1`] = `
+<main
+  className="measure center sans-serif ph2 "
+>
+  <h1
+    className="lh-title fw1 f2"
+  >
+    <img
+      alt="illustration by supasavina"
+      className="mr2 h3 w3 v-mid"
+      src="/static/logo.png"
+    />
+    melkat.link
+  </h1>
+  <footer
+    className="lh-copy tc"
+  >
+    <p>
+      a link blog from 
+      <a
+        href="https://melaniekat.com"
+        rel="me"
+      >
+        melanie kat
+      </a>
+       &lt;3
+    </p>
+    <p>
+      powered by 
+      <a
+        href="https://raindrop.io"
+      >
+        raindrop.io
+      </a>
+    </p>
+  </footer>
+</main>
+`;
