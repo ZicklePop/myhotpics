@@ -4,37 +4,24 @@ exports[`page - index should render 1`] = `
 <main
   className="measure center sans-serif ph2 "
 >
-  <h1
-    className="lh-title fw1 f2"
+  <form
+    action="/"
+    className="jsx-1114613828"
+    method="get"
   >
-    <img
-      alt="illustration by supasavina"
-      className="mr2 h3 w3 v-mid"
-      src="/static/logo.png"
+    <input
+      autofocus="true"
+      className="jsx-1114613828 input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100"
+      defaultValue=""
+      name="q"
+      placeholder="HOT PICS"
+      style={
+        Object {
+          "appearance": "none",
+        }
+      }
+      type="text"
     />
-    melkat.link
-  </h1>
-  <footer
-    className="lh-copy tc"
-  >
-    <p>
-      a link blog from 
-      <a
-        href="https://melaniekat.com"
-        rel="me"
-      >
-        melanie kat
-      </a>
-       &lt;3
-    </p>
-    <p>
-      powered by 
-      <a
-        href="https://raindrop.io"
-      >
-        raindrop.io
-      </a>
-    </p>
-  </footer>
+  </form>
 </main>
 `;
