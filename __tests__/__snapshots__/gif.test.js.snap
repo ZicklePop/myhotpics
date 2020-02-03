@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component - gif should render 1`] = `
+<a
+  className="bg-center cover dib relative w-third ma0"
+  href="https://gif.myhot.pics/Chase%20Nordengren%20Nordo%20Pow.gif"
+  style={
+    Object {
+      "backgroundImage": "url(https://gif.myhot.pics/Chase%20Nordengren%20Nordo%20Pow.gif)",
+      "height": "0",
+      "paddingBottom": "33.33333%",
+    }
+  }
+  title="Chase Nordengren Nordo Pow"
+/>
+`;

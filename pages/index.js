@@ -2,15 +2,24 @@ import React from 'react'
 import Gif from '../components/gif'
 import Layout from '../components/layout'
 import Search from '../components/search'
+import fetch from 'isomorphic-unfetch'
+import get from 'lodash/get'
 import map from 'lodash/map'
+import useSWR from 'swr'
 
-const Index = ({ query, gifs }) => {
+const API = '/api/gifs'
+const fetcher = (url) => fetch(url).then(r => r.json())
+
+const Index = ({ q }) => {
+  const query = q ? `?q=${q}` : ''
+  const { data } = useSWR(`${API}${query}`, fetcher)
+
   return (
     <Layout>
-      <Search defaultValue={query} />
-      {map(gifs, el => (
+      <Search defaultValue={q} />
+      {map(get(data, 'images', []), (el, i) => (
         <Gif
-          key={el.title}
+          key={`${i}-${el.title}`}
           {...el}
         />
       ))}
@@ -18,24 +27,8 @@ const Index = ({ query, gifs }) => {
   )
 }
 
-Index.getInitialProps = async function () {
-  return {
-    query: '',
-    gifs: [
-      {
-        url: 'https://myhot.pics/Spongebob%20Patrick%20Yay%20Jump%20Joy%20Butt%20Touch.gif',
-        title: 'Spongebob Patrick Yay Jump Joy Butt Touch'
-      },
-      {
-        url: 'https://myhot.pics/Gabriel%20DropOut%20-%20Snug%20in%20a%20Blanket.gif',
-        title: 'Gabriel DropOut - Snug in a Blanket'
-      },
-      {
-        url: 'https://myhot.pics/Hinako%20Note%20-%20Kicking%20Upset%20Bed.gif',
-        title: 'Hinako Note - Kicking Upset Bed'
-      }
-    ]
-  }
+Index.getInitialProps = async function ({ query }) {
+  return { q: get(query, 'q') }
 }
 
 export default Index

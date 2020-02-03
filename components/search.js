@@ -24,12 +24,12 @@ const Search = ({ defaultValue }) => (
       `}
     </style>
     <input
-      type='text'
+      autoFocus
+      className={cx.input}
+      defaultValue={defaultValue}
       name='q'
       placeholder='HOT PICS'
-      defaultValue={defaultValue}
-      autofocus='true'
-      className={cx.input}
+      type='text'
       style={{
         appearance: 'none'
       }}

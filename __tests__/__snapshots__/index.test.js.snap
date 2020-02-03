@@ -2,7 +2,7 @@
 
 exports[`page - index should render 1`] = `
 <main
-  className="measure center sans-serif ph2 "
+  className="sans-serif ma0 pa0 "
 >
   <form
     action="/"
@@ -10,7 +10,7 @@ exports[`page - index should render 1`] = `
     method="get"
   >
     <input
-      autofocus="true"
+      autoFocus={true}
       className="jsx-1114613828 input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100"
       defaultValue=""
       name="q"

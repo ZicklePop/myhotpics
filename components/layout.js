@@ -3,10 +3,7 @@ import Head from 'next/head'
 import PropTypes from 'prop-types'
 
 const cx = {
-  main: 'measure center sans-serif ph2',
-  header: 'lh-title fw1 f2',
-  logo: 'mr2 h3 w3 v-mid',
-  footer: 'lh-copy tc'
+  main: 'sans-serif ma0 pa0'
 }
 
 const Layout = ({ title, description, children, className }) => {
@@ -19,13 +16,18 @@ const Layout = ({ title, description, children, className }) => {
         <meta name='twitter:description' content={description} />
         <meta property='og:description' content={description} />
         <meta property='og:title' content={title} />
-        <link rel='alternate' type='application/rss+xml' title='melkat.link' href='https://raindrop.io/collection/9554731/feed' />
         <style global jsx>
           {`
             body {
-              font-size 0;
-              margin: 0 auto;
-              padding: 0;
+              background-color: #000;
+              color: #fff;
+            }
+
+            @media (prefers-color-scheme: light) {
+              body {
+                background-color: #fff;
+                color: #424242;
+              }
             }
           `}
         </style>
