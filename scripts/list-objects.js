@@ -8,6 +8,7 @@ import map from 'lodash/map'
 import s3 from './s3'
 import qs from 'querystring'
 import shuffle from 'lodash/shuffle'
+import take from 'lodash/take'
 
 const CDN = 'https://gif.myhot.pics/'
 const LIMIT = 18
@@ -17,11 +18,7 @@ const SEARCH_OPTIONS = {
 
 const listObjects = async (q) => {
   const isSearch = !isNil(q)
-  const params = {}
-  if (!isSearch) {
-    params.MaxKeys = LIMIT
-  }
-  const res = await s3.listObjects(params).promise()
+  const res = await s3.listObjects().promise()
   const content = get(res, 'Contents', [])
   const mapped = map(content, el => {
     const title = el.Key.slice(0, -4)
@@ -42,7 +39,7 @@ const listObjects = async (q) => {
     results = shuffle(filtered)
   }
 
-  return results
+  return take(results, LIMIT)
 }
 
 export default listObjects
