@@ -7,6 +7,7 @@ import lowerCase from 'lodash/lowerCase'
 import map from 'lodash/map'
 import s3 from './s3'
 import qs from 'querystring'
+import shuffle from 'lodash/shuffle'
 
 const CDN = 'https://gif.myhot.pics/'
 const LIMIT = 18
@@ -37,6 +38,8 @@ const listObjects = async (q) => {
   if (isSearch) {
     const fuse = new Fuse(filtered, SEARCH_OPTIONS)
     results = fuse.search(q)
+  } else {
+    results = shuffle(filtered)
   }
 
   return results
