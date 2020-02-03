@@ -28,6 +28,9 @@ const Index = ({ q }) => {
 }
 
 Index.getInitialProps = async function ({ query }) {
+  if (get(query, 'format') === 'random.gif') {
+
+  }
   return { q: get(query, 'q') }
 }
 

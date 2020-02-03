@@ -2,7 +2,7 @@
 
 exports[`component - gif should render 1`] = `
 <a
-  className="bg-center cover dib relative w-third ma0"
+  className="bg-center cover dib relative w-third ma0 fl"
   href="https://gif.myhot.pics/Chase%20Nordengren%20Nordo%20Pow.gif"
   style={
     Object {
