@@ -17,7 +17,7 @@ const SEARCH_OPTIONS = {
 const listObjects = async (q) => {
   const isSearch = !isNil(q)
   const params = {}
-  if (isSearch) {
+  if (!isSearch) {
     params.MaxKeys = LIMIT
   }
   const res = await s3.listObjects(params).promise()
