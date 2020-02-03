@@ -9,7 +9,7 @@ import s3 from './s3'
 import qs from 'querystring'
 import shuffle from 'lodash/shuffle'
 
-const CDN = 'http://my-hot-pics.s3-website-us-west-1.amazonaws.com/' // 'https://gif.myhot.pics/'
+const CDN = 'https://gif.myhot.pics/'
 const LIMIT = 18
 const SEARCH_OPTIONS = {
   keys: ['title']
