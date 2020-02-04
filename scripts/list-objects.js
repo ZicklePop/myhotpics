@@ -36,7 +36,9 @@ const listObjects = async (q) => {
     const fuse = new Fuse(filtered, SEARCH_OPTIONS)
     results = fuse.search(q)
   } else {
-    results = shuffle(filtered)
+    results = shuffle(filter(filtered, o => (
+      lowerCase(o.title).indexOf('nsfw') === -1
+    )))
   }
 
   return take(results, LIMIT)
