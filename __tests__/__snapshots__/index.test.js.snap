@@ -2,7 +2,7 @@
 
 exports[`page - index should render 1`] = `
 <main
-  className="sans-serif ma0 pa0 "
+  className="jsx-3213346430 sans-serif ma0 pa0 "
 >
   <form
     action="/"

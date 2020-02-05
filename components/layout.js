@@ -16,15 +16,22 @@ const Layout = ({ title, description, children, className }) => {
         <meta name='twitter:description' content={description} />
         <meta property='og:description' content={description} />
         <meta property='og:title' content={title} />
-        <style global jsx>
-          {`
-            body {
-              background-color: #000;
-              color: #fff;
-            }
-          `}
-        </style>
       </Head>
+      <style global jsx>
+        {`
+          body {
+            background-color: #000;
+            color: #fff;
+          }
+
+          @media (prefers-color-scheme: light) {
+            body {
+              color: #111;
+              background: #fff;
+            }
+          }
+         `}
+      </style>
       {children}
     </main>
   )
