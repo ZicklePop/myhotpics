@@ -22,13 +22,6 @@ const Layout = ({ title, description, children, className }) => {
               background-color: #000;
               color: #fff;
             }
-
-            @media (prefers-color-scheme: light) {
-              body {
-                background-color: #fff;
-                color: #424242;
-              }
-            }
           `}
         </style>
       </Head>
