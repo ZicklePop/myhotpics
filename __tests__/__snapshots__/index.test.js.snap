@@ -11,11 +11,13 @@ exports[`page - index should render 1`] = `
   >
     <label
       className="jsx-1114613828"
+      for="q"
     >
       <input
         autoFocus={true}
         className="jsx-1114613828 input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100"
         defaultValue=""
+        id="q"
         name="q"
         placeholder="HOT PICS"
         style={

@@ -23,11 +23,12 @@ const Search = ({ defaultValue }) => (
         }
       `}
     </style>
-    <label>
+    <label for='q'>
       <input
         autoFocus
         className={cx.input}
         defaultValue={defaultValue}
+        id='q'
         name='q'
         placeholder='HOT PICS'
         type='text'
