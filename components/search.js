@@ -23,20 +23,27 @@ const Search = ({ defaultValue }) => (
         }
       `}
     </style>
-    <label htmlFor='q'>
-      <input
-        autoFocus
-        className={cx.input}
-        defaultValue={defaultValue}
-        id='q'
-        name='q'
-        placeholder='HOT PICS'
-        type='text'
-        style={{
-          appearance: 'none'
-        }}
-      />
+    <label
+      htmlFor='q'
+      style={{
+        color: 'transparent',
+        fontSize: 0
+      }}
+    >
+      {'Search for a gif'}
     </label>
+    <input
+      autoFocus
+      className={cx.input}
+      defaultValue={defaultValue}
+      id='q'
+      name='q'
+      placeholder='HOT PICS'
+      type='text'
+      style={{
+        appearance: 'none'
+      }}
+    />
   </form>
 )
 
