@@ -2,26 +2,30 @@
 
 exports[`page - index should render 1`] = `
 <main
-  className="jsx-3213346430 sans-serif ma0 pa0 "
+  className="jsx-1158505670 sans-serif ma0 pa0 "
 >
   <form
     action="/"
     className="jsx-1114613828"
     method="get"
   >
-    <input
-      autoFocus={true}
-      className="jsx-1114613828 input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100"
-      defaultValue=""
-      name="q"
-      placeholder="HOT PICS"
-      style={
-        Object {
-          "appearance": "none",
+    <label
+      className="jsx-1114613828"
+    >
+      <input
+        autoFocus={true}
+        className="jsx-1114613828 input-reset sans-serif border-box bn br0 pa2 ma0 fw1 w-100"
+        defaultValue=""
+        name="q"
+        placeholder="HOT PICS"
+        style={
+          Object {
+            "appearance": "none",
+          }
         }
-      }
-      type="text"
-    />
+        type="text"
+      />
+    </label>
   </form>
 </main>
 `;

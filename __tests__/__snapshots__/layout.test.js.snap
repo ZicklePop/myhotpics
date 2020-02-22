@@ -2,13 +2,13 @@
 
 exports[`component - layout should render 1`] = `
 <main
-  className="jsx-3213346430 sans-serif ma0 pa0 "
+  className="jsx-1158505670 sans-serif ma0 pa0 "
 />
 `;
 
 exports[`component - layout should render with props 1`] = `
 <main
-  className="jsx-3213346430 sans-serif ma0 pa0 "
+  className="jsx-1158505670 sans-serif ma0 pa0 "
 >
   <b>
     #content

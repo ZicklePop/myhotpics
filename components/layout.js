@@ -9,7 +9,7 @@ const cx = {
 const Layout = ({ title, description, children, className }) => {
   return (
     <main className={`${cx.main} ${className}`}>
-      <Head>
+      <Head lang='en'>
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='twitter:title' content={title} />
@@ -30,7 +30,7 @@ const Layout = ({ title, description, children, className }) => {
               background: #fff;
             }
           }
-         `}
+        `}
       </style>
       {children}
     </main>

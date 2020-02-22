@@ -23,17 +23,19 @@ const Search = ({ defaultValue }) => (
         }
       `}
     </style>
-    <input
-      autoFocus
-      className={cx.input}
-      defaultValue={defaultValue}
-      name='q'
-      placeholder='HOT PICS'
-      type='text'
-      style={{
-        appearance: 'none'
-      }}
-    />
+    <label>
+      <input
+        autoFocus
+        className={cx.input}
+        defaultValue={defaultValue}
+        name='q'
+        placeholder='HOT PICS'
+        type='text'
+        style={{
+          appearance: 'none'
+        }}
+      />
+    </label>
   </form>
 )
 
