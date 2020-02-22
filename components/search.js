@@ -23,7 +23,7 @@ const Search = ({ defaultValue }) => (
         }
       `}
     </style>
-    <label for='q'>
+    <label htmlFor='q'>
       <input
         autoFocus
         className={cx.input}

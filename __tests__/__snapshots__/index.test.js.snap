@@ -11,7 +11,7 @@ exports[`page - index should render 1`] = `
   >
     <label
       className="jsx-1114613828"
-      for="q"
+      htmlFor="q"
     >
       <input
         autoFocus={true}
