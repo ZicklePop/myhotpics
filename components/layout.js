@@ -9,7 +9,7 @@ const cx = {
 const Layout = ({ title, description, children, className }) => {
   return (
     <main className={`${cx.main} ${className}`}>
-      <Head lang='en'>
+      <Head>
         <title>{title}</title>
         <meta name='description' content={description} />
         <meta name='twitter:title' content={title} />
