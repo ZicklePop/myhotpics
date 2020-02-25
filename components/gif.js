@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const cx = {
-  a: 'bg-center cover dib relative w-third ma0 fl'
+  a: 'bg-center cover dib relative w-50 ma0 fl'
 }
 
 const Gif = ({ url, title }) => (

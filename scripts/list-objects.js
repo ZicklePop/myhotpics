@@ -11,7 +11,7 @@ import shuffle from 'lodash/shuffle'
 import take from 'lodash/take'
 
 const CDN = 'https://gif.myhot.pics/'
-const LIMIT = 18
+const LIMIT = 16
 const SEARCH_OPTIONS = {
   shouldSort: true,
   keys: ['title']
