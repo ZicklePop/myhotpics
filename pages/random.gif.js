@@ -2,8 +2,7 @@ import React from 'react'
 import fetch from 'isomorphic-unfetch'
 import get from 'lodash/get'
 import shuffle from 'lodash/shuffle'
-
-const API = 'https://myhot.pics/api/gifs'
+import API from '../scripts/api'
 
 const RandomGif = ({ url }) => {
   if (typeof window !== 'undefined') {

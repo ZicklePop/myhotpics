@@ -5,33 +5,26 @@ import Search from '../components/search'
 import fetch from 'isomorphic-unfetch'
 import get from 'lodash/get'
 import map from 'lodash/map'
-import useSWR from 'swr'
+import API from '../scripts/api'
 
-const API = '/api/gifs'
-const fetcher = (url) => fetch(url).then(r => r.json())
-
-const Index = ({ q }) => {
-  const query = q ? `?q=${q}` : ''
-  const { data } = useSWR(`${API}${query}`, fetcher)
-
-  return (
-    <Layout>
-      <Search defaultValue={q} />
-      {map(get(data, 'images', []), (el, i) => (
-        <Gif
-          key={`${i}-${el.title}`}
-          {...el}
-        />
-      ))}
-    </Layout>
-  )
-}
+const Index = ({ q, data }) => (
+  <Layout>
+    <Search defaultValue={q} />
+    {map(get(data, 'images', []), (el, i) => (
+      <Gif
+        key={`${i}-${el.title}`}
+        {...el}
+      />
+    ))}
+  </Layout>
+)
 
 Index.getInitialProps = async function ({ query }) {
-  if (get(query, 'format') === 'random.gif') {
-
-  }
-  return { q: get(query, 'q') }
+  const q = get(query, 'q')
+  const qs = q ? `?q=${q}` : ''
+  const res = await fetch(`${API}${qs}`)
+  const data = await res.json()
+  return { q, data }
 }
 
 export default Index
