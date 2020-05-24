@@ -9,8 +9,9 @@ import s3 from './s3'
 import qs from 'querystring'
 import shuffle from 'lodash/shuffle'
 import take from 'lodash/take'
+import { host } from './api'
 
-const CDN = 'https://gif.myhot.pics/'
+const CDN = `${host}/i/`
 const LIMIT = 16
 const SEARCH_OPTIONS = {
   shouldSort: true,
