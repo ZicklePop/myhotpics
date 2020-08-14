@@ -1,0 +1,28 @@
+{
+  "name": "MYHOT.PICS - The hottest animated gifs on the internet",
+  "short_name": "MYHOT.PICS",
+  "description": "gif things done with a gif management system",
+  "theme_color": "#00d6ff",
+  "background_color": "#000000",
+  "display": "minimal-ui",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "1024x1204",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Random Gif",
+      "short_name": "Random",
+      "description": "Get a random gif",
+      "url": "/random.gif"
+    }
+  ],
+  "splash_pages": null
+}

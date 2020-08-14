@@ -11,6 +11,7 @@ const Layout = ({ title, description, children, className }) => {
     <main className={`${cx.main} ${className}`}>
       <Head>
         <title>{title}</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
         <meta name='description' content={description} />
         <meta name='twitter:title' content={title} />
         <meta name='twitter:description' content={description} />
@@ -22,6 +23,10 @@ const Layout = ({ title, description, children, className }) => {
           body {
             background-color: #000;
             color: #fff;
+          }
+
+          .cv-auto {
+            content-visibility: auto;
           }
 
           @media (prefers-color-scheme: light) {

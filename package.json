@@ -17,6 +17,7 @@
     "fuse.js": "^3.6.1",
     "isomorphic-unfetch": "^3.0.0",
     "next": "^9.5.1",
+    "next-pwa": "^3.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -26,10 +27,10 @@
     "jest": "^25.1.0",
     "react-test-renderer": "^16.13.0",
     "standard": "^14.3.3",
-    "vercel": "^19.1.1"
+    "vercel": "^19.2.0"
   },
   "resolutions": {
-    "minimist": "^1.2.5"
+    "serialize-javascript": "^3.1.0"
   },
   "jest": {
     "transform": {
@@ -41,6 +42,10 @@
     ]
   },
   "standard": {
-    "env": "jest"
+    "env": "jest",
+    "ignore": [
+      "/public/sw.js",
+      "/public/workbox-*.js"
+    ]
   }
 }
