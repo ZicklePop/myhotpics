@@ -2,6 +2,7 @@
   "name": "myhotpics",
   "version": "0.0.1",
   "license": "Unlicense",
+  "repository": "github:zicklepop/myhotpics",
   "scripts": {
     "preinstall": "npx npm-force-resolutions",
     "dev": "next",
