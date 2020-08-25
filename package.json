@@ -31,7 +31,7 @@
     "next-purgecss": "^4.0.0",
     "react-test-renderer": "^16.13.1",
     "standard": "^14.3.4",
-    "vercel": "^19.2.0"
+    "vercel": "^20.0.0"
   },
   "resolutions": {
     "minimist": "^1.2.3",
