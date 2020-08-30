@@ -8,9 +8,9 @@ const cx = {
 }
 
 const Gif = ({ url, title }) => {
-  const handleClick = e => {
+  const handleClick = async e => {
     e.preventDefault()
-    if (navigator.share) {
+    try {
       fetch(url)
         .then(res => res.blob())
         .then(blob => {
@@ -21,8 +21,12 @@ const Gif = ({ url, title }) => {
           }
           navigator.share(data)
         })
-        .catch(() => window.location.assign(url))
-    } else {
+        .catch(err => {
+          window.alert(err)
+          window.location.assign(url)
+        })
+    } catch (err) {
+      window.alert(err)
       window.location.assign(url)
     }
   }
@@ -31,7 +35,7 @@ const Gif = ({ url, title }) => {
     <a
       className={cx.a}
       href={url}
-      onClick={e => handleClick(e)}
+      onClick={handleClick}
       title={title}
       style={{
         backgroundImage: `url(${url})`,
