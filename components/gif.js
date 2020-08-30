@@ -11,7 +11,7 @@ const Gif = ({ url, title }) => {
   const handleClick = async e => {
     e.preventDefault()
     try {
-      fetch(url)
+      fetch(url, { mode: 'no-cors' })
         .then(res => res.blob())
         .then(blob => {
           const file = new File([blob], `${title}.gif`, { type: blob.type })
