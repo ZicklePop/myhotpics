@@ -4,6 +4,7 @@ exports[`component - gif should render 1`] = `
 <a
   className="bg-center cover dib relative w-50 ma0 fl cv-auto"
   href="https://gif.myhot.pics/Chase%20Nordengren%20Nordo%20Pow.gif"
+  onClick={[Function]}
   style={
     Object {
       "backgroundImage": "url(https://gif.myhot.pics/Chase%20Nordengren%20Nordo%20Pow.gif)",
