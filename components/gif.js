@@ -10,15 +10,23 @@ const cx = {
 const Gif = ({ url, title }) => {
   const handleClick = async e => {
     e.preventDefault()
-    const res = await fetch(url);
-    const blob = await res.blob();
-    const file = new File([blob], `${title}.gif`, {type: blob.type});
-    const data = { 
-      url: image,
-      files: [file]
-    }
-    if (navigator.canShare && navigator.canShare(data)) {
-      await navigator.share(data);
+    try {
+      fetch(url)
+        .then(res => res.blob())
+        .then(blob => {
+          const file = new File([blob], `${title}.gif`, { type: blob.type })
+          const data = {
+            url,
+            files: [file]
+          }
+          navigator.share(data)
+        })
+        .catch(err => {
+          console.warn(err)
+          window.location.assign(url)
+        })
+    } catch (err) {
+      window.location.assign(url)
     }
   }
 
