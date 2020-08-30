@@ -1,27 +1,27 @@
-/* globals File, fetch */
+/* globals File */
 import React from 'react'
 import PropTypes from 'prop-types'
+import fetch from 'isomorphic-unfetch'
 
 const cx = {
   a: 'bg-center cover dib relative w-50 ma0 fl cv-auto'
 }
 
 const Gif = ({ url, title }) => {
-  const handleClick = async e => {
+  const handleClick = e => {
     e.preventDefault()
-    if (navigator.canShare) {
-      const res = await fetch(url)
-      const blob = await res.blob()
-      const file = new File([blob], `${title}.gif`, { type: blob.type })
-      const data = {
-        url,
-        files: [file]
-      }
-      if (navigator.canShare(data)) {
-        await navigator.share(data)
-      } else {
-        window.location.assign(url)
-      }
+    if (navigator.share) {
+      fetch(url)
+        .then(res => res.blob())
+        .then(blob => {
+          const file = new File([blob], `${title}.gif`, { type: blob.type })
+          const data = {
+            url,
+            files: [file]
+          }
+          navigator.share(data)
+        })
+        .catch(() => window.location.assign(url))
     } else {
       window.location.assign(url)
     }
