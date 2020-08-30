@@ -10,10 +10,11 @@ const cx = {
 const Gif = ({ url, title }) => {
   const handleClick = async e => {
     e.preventDefault()
+
     if (navigator.canShare) {
       const res = await fetch(url)
       const blob = await res.blob()
-      const file = new File([blob], `${encodeURIComponent(title)}.gif`, { type: blob.type })
+      const file = new File([blob], `${title}.gif`, { type: blob.type })
       const data = {
         url,
         files: [file]
