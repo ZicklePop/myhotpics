@@ -32,7 +32,7 @@
     "next-purgecss": "^4.0.0",
     "react-test-renderer": "^16.13.1",
     "standard": "^14.3.4",
-    "vercel": "^20.1.0"
+    "vercel": "^20.1.1"
   },
   "resolutions": {
     "js-yaml": "^3.14.0",
