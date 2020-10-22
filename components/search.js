@@ -48,7 +48,7 @@ const Search = ({ defaultValue }) => {
           fontSize: 0
         }}
       >
-        {'Search for a gif'}
+        Search for a gif
         <Logo className={`${cx.logo} ${isFocused ? 'o-0' : 'o-100'}`} />
       </label>
       <input
