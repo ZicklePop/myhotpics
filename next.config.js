@@ -9,6 +9,6 @@ module.exports = withPlugins(
         dest: 'public',
         runtimeCaching
       }
-    }],
+    }]
   ]
 )
