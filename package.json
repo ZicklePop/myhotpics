@@ -33,7 +33,7 @@
     "postcss": "^8.3.5",
     "react-test-renderer": "^17.0.2",
     "standard": "^16.0.3",
-    "vercel": "^22.0.1"
+    "vercel": "^23.0.1"
   },
   "resolutions": {
     "js-yaml": "^3.14.0",
