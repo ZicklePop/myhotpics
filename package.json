@@ -28,7 +28,7 @@
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^11.0.1",
+    "eslint-config-next": "^11.1.0",
     "jest": "^27.0.6",
     "next-compose-plugins": "^2.2.1",
     "postcss": "^8.3.6",
